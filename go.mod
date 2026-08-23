@@ -1,4 +1,4 @@
-module github.com/nolannguyen1212/go-runbook
+module github.com/nolannguyen1212/go-playground
 
 go 1.26.4
 

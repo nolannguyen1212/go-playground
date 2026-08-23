@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/go-jose/go-jose/v4/testutils/assert"
-	"github.com/nolannguyen1212/go-runbook/internal"
+	"github.com/nolannguyen1212/go-playground/internal"
 )
 
 func TestProducer(t *testing.T) {
