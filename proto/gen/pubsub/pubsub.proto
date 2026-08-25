@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package pubsub;
+
+option go_package = "github.com/nolannguyen1212/go-playground/proto/pb/pubsub";
+
+message PublishRequest {
+  string topic = 1;
+  string message = 2;
+}
+
+message PublishResponse {
+  bool success = 1;
+}
+
+message SubscribeRequest {
+  string topic = 1;
+}
+
+message Message {
+  string text = 1;
+}
+
+service PubsubService {
+  // Unary
+  rpc Publish(PublishRequest) returns (PublishResponse);
+
+  // Streaming
+  rpc Subscribe(SubscribeRequest) returns (stream Message);
+}
